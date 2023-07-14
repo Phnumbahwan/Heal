@@ -4,7 +4,7 @@ One-click and get motivate at your fingertips. Find instant tranquility with our
 ## Installation
 
 
-1. Download the extension package from the [Google Drive]([your_google_drive_link](https://drive.google.com/drive/u/0/folders/1Aawg47iK_924gTSHCo1_BmLNprxhci69)) link.
+1. Download the extension package from the link [https://drive.google.com/drive/u/0/folders/1Aawg47iK_924gTSHCo1_BmLNprxhci69].
 2. Unzip the downloaded file to extract the extension folder.
 
 ## Installation Instructions
