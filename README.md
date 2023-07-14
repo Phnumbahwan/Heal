@@ -3,6 +3,7 @@ One-click calmness at your fingertips. Find instant tranquility with our app.
 
 ## Installation
 
+
 1. Download the extension package from the [Google Drive]([your_google_drive_link](https://drive.google.com/drive/u/0/folders/1Aawg47iK_924gTSHCo1_BmLNprxhci69)) link.
 2. Unzip the downloaded file to extract the extension folder.
 
@@ -19,6 +20,8 @@ One-click calmness at your fingertips. Find instant tranquility with our app.
 1. Right-click anywhere on a webpage.
 2. Select "My Extension" from the context menu.
 3. A new tab will open with a specific link (replace with your desired website).
+   
+   ![heal](https://github.com/Phnumbahwan/Heal/assets/52746589/afab33fe-9480-4208-9eea-a8c1edff2f40)
 
 ## Contributing
 
