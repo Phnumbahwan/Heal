@@ -22,11 +22,11 @@ function App() {
   }
 
   useEffect(() => {
+    getQuote();
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      getQuote();
-    }, 5000);
+    }, 3000);
   }, [])
 
   return (
