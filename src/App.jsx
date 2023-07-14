@@ -26,7 +26,7 @@ function App() {
     setTimeout(() => {
       setLoading(false);
       getQuote();
-    }, 3000);
+    }, 5000);
   }, [])
 
   return (
