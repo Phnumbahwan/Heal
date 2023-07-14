@@ -1,33 +1,39 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Quote from './components/Quote';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(false);
+  const [quote, setQuote] = useState({});
+
+  const getQuote = async () => {
+    var category = 'inspirational'
+    const response = await fetch('https://api.api-ninjas.com/v1/quotes?category=' + category, {
+      method: "GET",
+      headers: {
+        'X-Api-Key': 'F4/loGHatIMpLJw7FHk6Og==Qy29hzU8vgeE8Dh6'
+      }
+    });
+    const quote = await response.json();
+    console.log(quote[0]);
+    setQuote(quote[0]);
+  }
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      getQuote();
+    }, 3000);
+  }, [])
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        {loading ? 'LOADING...' : <Quote quote={quote?.quote} author={quote?.author} />}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
