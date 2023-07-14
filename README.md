@@ -1,5 +1,5 @@
 # Heal
-One-click calmness at your fingertips. Find instant tranquility with our app.
+One-click and get motivate at your fingertips. Find instant tranquility with our free quote app.
 
 ## Installation
 
