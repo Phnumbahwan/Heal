@@ -33,7 +33,7 @@ function App() {
   return (
     <>
       <div>
-        {true ? <Loading/> : <Quote quote={quote?.quote} author={quote?.author} />}
+        {loading ? <Loading/> : <Quote quote={quote?.quote} author={quote?.author} />}
       </div>
     </>
   )
