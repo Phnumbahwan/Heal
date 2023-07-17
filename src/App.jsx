@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Quote from './components/Quote';
+import Loading from './components/Loading';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -32,7 +33,7 @@ function App() {
   return (
     <>
       <div>
-        {loading ? 'LOADING...' : <Quote quote={quote?.quote} author={quote?.author} />}
+        {true ? <Loading/> : <Quote quote={quote?.quote} author={quote?.author} />}
       </div>
     </>
   )
