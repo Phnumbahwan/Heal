@@ -1,6 +1,6 @@
 const Quote = ({ quote, author }) => {
     return (
-        <div>{`${quote} -"${author}"`}</div>
+        <div>{`"${quote}" -${author}`}</div>
     );
 }
 
