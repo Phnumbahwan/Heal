@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Quote from './components/Quote';
 import Loading from './components/Loading';
+import TimeChecker from './hooks/TimeChecker';
+import GetAldrin from './components/GetAldrin';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -18,7 +20,6 @@ function App() {
       }
     });
     const quote = await response.json();
-    console.log(quote[0]);
     setQuote(quote[0]);
   }
 
@@ -33,7 +34,9 @@ function App() {
   return (
     <>
       <div>
-        {loading ? <Loading/> : <Quote quote={quote?.quote} author={quote?.author} />}
+        {TimeChecker() ? <GetAldrin /> : (
+          loading ? <Loading /> : <Quote quote={quote?.quote} author={quote?.author} />
+        )}
       </div>
     </>
   )
